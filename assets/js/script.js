@@ -162,14 +162,13 @@ let taskButtonHandler = function (event) {
   // get target element from event
   let targetEl = event.target;
 
-  // edit button was clicked
   if (targetEl.matches(".edit-btn")) {
-    let taskId = targetEl.getAttribute("data-task-id");
+    console.log("edit", targetEl);
+    var taskId = targetEl.getAttribute("data-task-id");
     editTask(taskId);
-  }
-  // delete button was clicked
-  else if (targetEl.matches(".delete-btn")) {
-    let taskId = targetEl.getAttribute("data-task-id");
+  } else if (targetEl.matches(".delete-btn")) {
+    console.log("delete", targetEl);
+    var taskId = targetEl.getAttribute("data-task-id");
     deleteTask(taskId);
   }
 };
